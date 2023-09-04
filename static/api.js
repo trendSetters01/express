@@ -17,20 +17,6 @@ export function verifyOwnershipWithDappflow(algoAddress, callback) {
 }
 
 export function submitFormToFormspree(event) {
-    // event.preventDefault();
-
-    // const algoAddress = document.getElementById('algoAddress').value.trim();
-    // const cardanoAddress = document.getElementById('cardanoAddress').value.trim();
-
-    // const formData = new FormData(document.getElementById('claimForm'));
-
-    // fetch('https://formspree.io/f/mpzgrpll', {
-    //     method: 'POST',
-    //     body: formData,
-    //     headers: {
-    //         'Accept': 'application/json'
-    //     }
-    // })
     event.preventDefault();
 
     const algoAddress = document.getElementById('algoAddress').value.trim();

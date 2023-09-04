@@ -2,9 +2,6 @@ import { clearInputs } from './utils.js';
 import { verifyOwnershipWithDappflow, submitFormToFormspree, checkClaim } from './api.js';
 import { closeModal, showMessage } from './ui.js';
 
-
-
-// Load the mapping JSON file when the page loads
 window.onload = function () {
     clearInputs();
 };
