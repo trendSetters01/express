@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Cardano NFT</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+
+</head>
+
+<body>
+    <div class="description">
+        <h1>Welcome to the NFT Portal 🚀</h1>
+        <p>So, you've snagged yourself a shiny Algorand NFT? Awesome! But guess what? There's more! 🎉</p>
+        <p>With every Algorand NFT you purchase, you get exclusive access to a mysterious Cardano NFT. It's like finding
+            a golden ticket inside your chocolate bar! 🎫✨</p>
+        <p>Want to see what's waiting for you on the Cardano blockchain? Just pop your Algorand address below, and let's
+            unveil the magic! 🪄</p>
+    </div>
+
+    <input type="text" id="algoAddress" placeholder="Enter your Algorand address">
+    <div class="default-buttons">
+        <button id="checkClaim">Check</button>
+        <button id="clearInputs">Restart</button>
+    </div>
+
+    <div id="claimInfo" style="display:none;">
+        <p>Your Cardano NFT: <span id="cardanoNFT"></span></p>
+        <p>Excited? We bet you are! 🎉 Now, just enter your Cardano address below to claim your prize. And remember,
+            good things come to those who HODL! 😉</p>
+        <form id="claimForm">
+            <label>
+                Your email:
+                <input type="email" name="email" id="email" placeholder="Enter your Email address">
+            </label>
+            <label>
+                Enter your Cardano address to claim:
+                <input type="text" id="cardanoAddress" name="cardanoAddress" placeholder="Enter your Cardano address">
+            </label>
+            <input type="hidden" id="hiddenAlgoAddress" name="algoAddress">
+            <button id="sendButton">Send</button>
+        </form>
+    </div>
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+    <script src="../static/utils.js" type="module"></script>
+    <script src="../static/api.js" type="module"></script>
+    <script src="../static/ui.js" type="module"></script>
+    <script src="../static/main.js" type="module"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+</body>
+
+</html>
