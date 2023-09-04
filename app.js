@@ -44,6 +44,27 @@ app.get('/api/getMappings', (req, res) => {
     });
 });
 
+app.post('/api/submitForm', (req, res) => {
+    const formData = req.body;
+
+    fetch(process.env.FORMSPREE_URL, {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        res.json(data);
+    })
+    .catch(error => {
+        console.error("Error submitting form:", error);
+        res.status(500).send('Error submitting form.');
+    });
+});
+
 app.post('/api/claimNFT', (req, res) => {
     const { mappingKey, algoAddress, cardanoAddress } = req.body;
     const updateData = {
